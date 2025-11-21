@@ -1,6 +1,7 @@
 import json
 import pandas as pd
 import networkx as nx
+from sentence_transformers import SentenceTransformer
 from pathlib import Path
 from scores_metric import *
 from steiner_subtree_on_tree import *
@@ -13,9 +14,7 @@ from branches_from_the_heart import *
 from BranchExpansion import *
 from FirstEntryLogFile import *
 
-def create_initial_canvas(MaximumSimilarityTree,
-                          QuestionsConceptsDF, 
-                          Fraction_of_Questions=0.2,
+def create_initial_canvas(Fraction_of_Questions=0.2,
                           MetricV=["degree"], 
                           N=20, 
                           routeCanvas="initial.canvas",
@@ -25,6 +24,26 @@ def create_initial_canvas(MaximumSimilarityTree,
                           padding=50,
                           Develop=0,
                           colorsPalette='Colors.csv'):
+
+
+    AdjacencyFolder=MainFolder+'/Adjacency'
+    AdjacencyMatrixFileName='adjacency_matrix_Questions-Concepts_20250730.csv'
+    IdConceptsFileName='concept_id_mapping_20250730.csv'
+    QuestionsConceptsDF=pd.read_csv(AdjacencyFolder+'/'+AdjacencyMatrixFileName,index_col=0)
+    idsDF=pd.read_csv(AdjacencyFolder+'/'+IdConceptsFileName,index_col=0)
+    model = SentenceTransformer("all-MiniLM-L6-v2")
+    QL=QuestionsConceptsDF.index
+    embeddings = model.encode(QL)
+    similarities = model.similarity(embeddings, embeddings)
+
+    #GraphQ=nx.from_numpy_array(QAdjacencyMatrix)
+    GraphQ=nx.from_numpy_array(np.array(similarities))
+    GraphQ.remove_nodes_from(list(nx.isolates(GraphQ)))
+
+    #mst = nx.minimum_spanning_tree(GraphQ)
+    MaximumSimilarityTree=nx.maximum_spanning_tree(G=GraphQ, weight="weight")
+
+
     routeLog=routeCanvas.replace('.canvas','.xlsx')
     canvas_nodes=scores_metric(G=MaximumSimilarityTree, 
                                MetricV=MetricV,
