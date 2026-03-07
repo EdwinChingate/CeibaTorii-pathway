@@ -1,3 +1,6 @@
-# SummariesDigestor
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-on progress 
+![[]](https://github.com/EdwinChingate/CeibaTorii-pathway/CeibaTorii.png)
+
+# CeibaTorii pathway
+
