@@ -76,7 +76,8 @@ Enlace: Escriba aquí...                                                        
 
 **¿Qué pretende crear durante la residencia?**  
 *(Máx. 300 caracteres, 2 oraciones)*  
-- personal management + system, coupling + tutor: context virtual tutor (?)
+- personal management system + AI coupling + tutor: context agent tutor (?) (MVP)
+  (openclown)
 
 Escriba aquí...                                                                                                                  - PENDIENTE
 ---
@@ -85,12 +86,26 @@ Escriba aquí...                                                                
 
 **¿Cómo lo logrará técnicamente? (pasos, herramientas, recursos)**  
 
-Escriba aquí...                                                                                                                  - PENDIENTE
+- networks 
+  - random walk
+- software design (MVP) -> scale and test
+ - knowledge flowchart and quality flow
+- production, user feedback
+  - cybersecurity 
+- data analysis -> what kind of data can we process and what can we learn from it?
+- look for a partner in education with clear metrics 
+
 ---
 
 ### Equipo
 
 **¿Por qué usted/equipo es el adecuado para este proyecto?**  
+
+- We know about science and engineering
+  - we have experience sharing that knowledge
+- We envision a flawless and human-aware interaction human-machine guiding human development
+  - why we want that? 
+- 
 
 Escriba aquí...                                                                                                                  - PENDIENTE
 ---
@@ -98,6 +113,8 @@ Escriba aquí...                                                                
 ### Convicción y progreso
 
 **¿Por qué este proyecto vale la pena? ¿Qué progreso tiene?**  
+- There's a MVP draft 
+- Hyper-personalized learning support 
 
 Escriba aquí...                                                                                                                  - PENDIENTE
 ---
@@ -105,6 +122,7 @@ Escriba aquí...                                                                
 ### Usuarios e impacto
 
 **¿Quién usará los resultados y cómo?**  
+- Students
 
 Escriba aquí...                                                                                                                  - PENDIENTE
 ---
@@ -112,14 +130,17 @@ Escriba aquí...                                                                
 ### Fit con Astera
 
 **¿Por qué esta residencia es el entorno adecuado?**  
-**¿Por qué este problema no lo resolverán academia, gobierno o industria?**  
 
+**¿Por qué este problema no lo resolverán academia, gobierno o industria?**  
+- There's direct interest 
 Escriba aquí...                                                                                                                  - PENDIENTE
 ---
 
 ### Alcance
 
 **¿Qué está dentro del alcance (12–18 meses) y qué no?**  
+
+- 
 
 Escriba aquí...                                                                                                                  - PENDIENTE
 ---
